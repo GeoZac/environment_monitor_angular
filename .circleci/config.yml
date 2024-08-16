@@ -24,6 +24,14 @@ jobs:
             node --version
             npm --version
 
+      - run:
+          name: Run build
+          command: npm run build
+
+      - run:
+          name: Run tests
+          command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox
+
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
