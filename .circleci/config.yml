@@ -25,6 +25,10 @@ jobs:
             npm --version
 
       - run:
+          name: Install dependencies
+          command: npm install
+
+      - run:
           name: Run build
           command: npm run build
 
